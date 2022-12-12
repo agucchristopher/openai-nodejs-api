@@ -1,0 +1,28 @@
+{
+  "name": "chatgpt_backend",
+  "version": "1.0.0",
+  "description": "Giving my app access to chatgpt api",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "Chatgpt",
+    "AI",
+    "Dall-E"
+  ],
+  "author": "Agu C. Christopher",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
