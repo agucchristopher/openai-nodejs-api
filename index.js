@@ -10,6 +10,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/ai", ai);
-app.listen(PORT, () => {
+app.listen(PORT || 5000, () => {
   console.log(`Server running on port ${PORT}`);
 });
