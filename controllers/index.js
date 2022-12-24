@@ -1,3 +1,3 @@
-import createimage from "./ai.js";
+import { createimage, chat } from "./ai.js";
 
-export { createimage };
+export { createimage, chat };

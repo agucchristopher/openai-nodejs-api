@@ -1,7 +1,8 @@
 import express from "express";
-import { createimage } from "../controllers/index.js";
+import { createimage, chat } from "../controllers/index.js";
 
 const ai = express.Router();
 
-ai.post("/generateimage", createimage);
+ai.post("/createimage", createimage);
+ai.post("/chat", chat);
 export default ai;

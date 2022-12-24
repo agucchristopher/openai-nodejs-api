@@ -4,7 +4,7 @@ import { OpenAIApi } from "openai";
 const openai = new OpenAIApi(configuration);
 
 // Create Image Using Dall-E
-const createimage = async (req, res) => {
+export const createimage = async (req, res) => {
   const { prompt, size } = req.body;
   console.log(prompt);
   const response = await openai.createImage({
@@ -21,4 +21,20 @@ const createimage = async (req, res) => {
 
   res.end();
 };
-export default createimage;
+// Create Chats using Chat-GPT
+export const chat = async (req, res) => {
+  const { prompt, size } = req.body;
+  // const response = await openai.createCompletion({
+  //   prompt: prompt,
+  //   n: 1,
+  // });
+  // const reply = response.data.data[0].url;
+  const reply = "Heey";
+  res.status(200).json({
+    status: "Successful",
+    reply: reply,
+    message: prompt,
+  });
+
+  res.end();
+};
