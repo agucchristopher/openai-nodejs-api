@@ -29,7 +29,11 @@ export const chat = async (req, res) => {
   //   n: 1,
   // });
   // const reply = response.data.data[0].url;
-  const reply = "Heey";
+  const reply = openai.createCompletion({
+    n: 1,
+    max_tokens: 4175,
+    prompt: prompt,
+  });
   res.status(200).json({
     status: "Successful",
     reply: reply,
