@@ -29,16 +29,23 @@ export const chat = async (req, res) => {
   //   n: 1,
   // });
   // const reply = response.data.data[0].url;
-  const reply = openai.createCompletion({
-    n: 1,
-    max_tokens: 4175,
-    prompt: prompt,
-  });
-  res.status(200).json({
-    status: "Successful",
-    reply: reply,
-    message: prompt,
-  });
 
-  res.end();
+  try {
+    const reply = await openai.createCompletion({
+      n: 1,
+      max_tokens: 57,
+      prompt: prompt,
+      model: "text-davinci-003",
+    });
+    res.status(200).json({
+      status: "Successful",
+      reply: reply.data.choices[0].text,
+      message: prompt,
+    });
+  } catch (error) {
+    res.status(200).json({
+      status: "Successful",
+      reply: error.message,
+    });
+  }
 };
