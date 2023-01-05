@@ -1,4 +1,4 @@
-# Chat-GPT Image Generator Api 🚀🚀
+# OpenAI Node.js Api 🚀🚀
 
 A simple nodejs backend server using openai Chat-GPT and Dall-E api
 
@@ -6,7 +6,7 @@ A simple nodejs backend server using openai Chat-GPT and Dall-E api
 
 ### 1. Clone the github repository:
 
-`git clone https://github.com/agucchristopher/chatgpt-image-generator-api.git/`
+`git clone https://github.com/agucchristopher/openai-nodejs-api.git/`
 
 ### 2. Set up your environment variables:
 
