@@ -33,7 +33,7 @@ export const chat = async (req, res) => {
   try {
     const reply = await openai.createCompletion({
       n: 1,
-      max_tokens: 57,
+      max_tokens: 580,
       prompt: prompt,
       model: "text-davinci-003",
     });
