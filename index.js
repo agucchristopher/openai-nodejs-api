@@ -1,12 +1,12 @@
 import express from "express";
 import { PORT } from "./config/index.js";
 import bodyParser from "body-parser";
+import cors from "cors";
 import ai from "./routes/index.js";
 const app = express();
 
-// parse application/x-www-form-urlencoded
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/ai", ai);
