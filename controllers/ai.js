@@ -24,6 +24,7 @@ export const createimage = async (req, res) => {
 // Create Chats using Chat-GPT
 export const chat = async (req, res) => {
   const { prompt, size } = req.body;
+  let myreply = false
   // const response = await openai.createCompletion({
   //   prompt: prompt,
   //   n: 1,
@@ -38,10 +39,11 @@ export const chat = async (req, res) => {
     });
     if (prompt.includes("name", 0) && prompt.includes("your", 0)) {
      reply = "Hi, my name is Chris-GPT"
+     myreply = true
       }     
     res.status(200).json({
       status: "Successful",
-      reply: reply.data.choices[0].text,
+      reply: myreply ? reply : reply.data.choices[0].text,
       message: prompt,
     });
   } catch (error) {
