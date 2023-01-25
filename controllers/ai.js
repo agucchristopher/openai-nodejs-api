@@ -36,7 +36,7 @@ export const chat = async (req, res) => {
       prompt: prompt,
       model: "text-davinci-003",
     });
-    if (prompt.include("your name")) {
+    if (prompt.includes("your name")) {
      reply = "Hi, my name is Chris-GPT"
       }     
     res.status(200).json({
