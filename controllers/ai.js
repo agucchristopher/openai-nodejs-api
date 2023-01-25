@@ -29,14 +29,16 @@ export const chat = async (req, res) => {
   //   n: 1,
   // });
   // const reply = response.data.data[0].url;
-
   try {
-    const reply = await openai.createCompletion({
+    let reply = await openai.createCompletion({
       n: 1,
       max_tokens: 580,
       prompt: prompt,
       model: "text-davinci-003",
     });
+    if (prompt.include("your name") {
+     reply = "Hi, my name is Chris-GPT"
+      }     
     res.status(200).json({
       status: "Successful",
       reply: reply.data.choices[0].text,
