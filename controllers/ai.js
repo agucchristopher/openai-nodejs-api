@@ -38,10 +38,10 @@ export const chat = async (req, res) => {
       prompt: prompt,
       model: "text-davinci-003",
     });
-    if (prompt.includes("name", 0) && prompt.includes("your", 0)) {
+/*    if (prompt.includes("name", 0) && prompt.includes("your", 0)) {
      reply = "Hi, my name is Chris-GPT"
      myreply = true
-      }     
+      }     */
     res.status(200).json({
       status: "Successful",
       reply: myreply ? reply : reply.data.choices[0].text,
