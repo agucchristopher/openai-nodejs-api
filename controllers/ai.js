@@ -19,7 +19,7 @@ export const createimage = async (req, res) => {
     image: image_url,
     description: prompt,
   });
-
+  console.log('Success post's); 
   res.end();
 };
 // Create Chats using Chat-GPT
