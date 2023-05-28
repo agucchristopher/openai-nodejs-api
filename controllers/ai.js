@@ -7,7 +7,8 @@ const openai = new OpenAIApi(configuration);
 export const createimage = async (req, res) => {
   const { prompt, size } = req.body;
   console.log(prompt);
-  let imgsize = size == 'medium' ? '1024x1024' : size == 'large' ? '1920x1080' : '512x512'
+  let imgsize =
+    size == "medium" ? "1024x1024" : size == "large" ? "1920x1080" : "512x512";
   const response = await openai.createImage({
     prompt: `${prompt}`,
     n: 1,
@@ -19,13 +20,13 @@ export const createimage = async (req, res) => {
     image: image_url,
     description: prompt,
   });
-  console.log('Success posts'); 
+  console.log("Success posts");
   res.end();
 };
 // Create Chats using Chat-GPT
 export const chat = async (req, res) => {
   const { prompt, size } = req.body;
-  let myreply = false
+  let myreply = false;
   // const response = await openai.createCompletion({
   //   prompt: prompt,
   //   n: 1,
@@ -38,7 +39,7 @@ export const chat = async (req, res) => {
       prompt: prompt,
       model: "text-davinci-003",
     });
-/*    if (prompt.includes("name", 0) && prompt.includes("your", 0)) {
+    /*    if (prompt.includes("name", 0) && prompt.includes("your", 0)) {
      reply = "Hi, my name is Chris-GPT"
      myreply = true
       }     */
