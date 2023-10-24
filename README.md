@@ -1,4 +1,4 @@
-# OpenAI Node.js Api 🚀
+# OpenAI Node.js Api 
 
 A simple nodejs backend server using openai Chat-GPT and Dall-E api
 
